@@ -1,0 +1,5 @@
+﻿  main.cpp
+c:\users\big boss\documents\at-man\at-man\external\olcpixelgameengine.h(856): warning C4244: '=': conversion from 'std::streamoff' to 'uint32_t', possible loss of data
+c:\users\big boss\documents\at-man\at-man\external\olcpixelgameengine.h(890): warning C4244: '=': conversion from 'std::streamoff' to 'uint32_t', possible loss of data
+  At-Man.vcxproj -> C:\Users\Big Boss\Documents\at-man\At-Man\Debug\At-Man.exe
+  At-Man.vcxproj -> C:\Users\Big Boss\Documents\at-man\At-Man\Debug\At-Man.pdb (Partial PDB)

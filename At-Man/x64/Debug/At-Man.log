@@ -1,0 +1,8 @@
+﻿  main.cpp
+c:\users\big boss\documents\at-man\at-man\external\olcpixelgameengine.h(856): warning C4244: '=': conversion from 'std::streamoff' to 'uint32_t', possible loss of data
+c:\users\big boss\documents\at-man\at-man\external\olcpixelgameengine.h(890): warning C4244: '=': conversion from 'std::streamoff' to 'uint32_t', possible loss of data
+c:\users\big boss\documents\at-man\at-man\external\olcpixelgameengine.h(1951): warning C4244: 'argument': conversion from 'WPARAM' to 'const unsigned short', possible loss of data
+c:\users\big boss\documents\at-man\at-man\external\olcpixelgameengine.h(1952): warning C4244: 'argument': conversion from 'WPARAM' to 'const unsigned short', possible loss of data
+c:\users\big boss\documents\at-man\at-man\src\main.cpp(28): warning C4244: 'argument': conversion from 'float' to 'int32_t', possible loss of data
+  At-Man.vcxproj -> C:\Users\Big Boss\Documents\at-man\At-Man\x64\Debug\At-Man.exe
+  At-Man.vcxproj -> C:\Users\Big Boss\Documents\at-man\At-Man\x64\Debug\At-Man.pdb (Partial PDB)
