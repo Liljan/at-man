@@ -433,6 +433,10 @@ namespace olc // All OneLoneCoder stuff will now exist in the "olc" namespace
 		void DrawPartialSprite(int32_t x, int32_t y, Sprite *sprite, int32_t ox, int32_t oy, int32_t w, int32_t h, uint32_t scale = 1);
 		// Draws a single line of text
 		void DrawString(int32_t x, int32_t y, std::string sText, Pixel col = olc::WHITE, uint32_t scale = 1);
+		// Draws one char
+		void DrawChar(int32_t x, int32_t y, char c, Pixel col = olc::WHITE, uint32_t scale = 1);
+
+
 		// Clears entire draw target to Pixel
 		void Clear(Pixel p);
 
@@ -1506,6 +1510,45 @@ namespace olc
 		if (col.ALPHA != 255)	SetPixelMode(Pixel::ALPHA);
 		else					SetPixelMode(Pixel::MASK);
 		for (auto c : sText)
+		{
+			if (c == '\n')
+			{
+				sx = 0; sy += 8 * scale;
+			}
+			else
+			{
+				int32_t ox = (c - 32) % 16;
+				int32_t oy = (c - 32) / 16;
+
+				if (scale > 1)
+				{
+					for (uint32_t i = 0; i < 8; i++)
+						for (uint32_t j = 0; j < 8; j++)
+							if (fontSprite->GetPixel(i + ox * 8, j + oy * 8).r > 0)
+								for (uint32_t is = 0; is < scale; is++)
+									for (uint32_t js = 0; js < scale; js++)
+										Draw(x + sx + (i*scale) + is, y + sy + (j*scale) + js, col);
+				}
+				else
+				{
+					for (uint32_t i = 0; i < 8; i++)
+						for (uint32_t j = 0; j < 8; j++)
+							if (fontSprite->GetPixel(i + ox * 8, j + oy * 8).r > 0)
+								Draw(x + sx + i, y + sy + j, col);
+				}
+				sx += 8 * scale;
+			}
+		}
+		SetPixelMode(m);
+	}
+
+	void PixelGameEngine::DrawChar(int32_t x, int32_t y, char c, Pixel col, uint32_t scale)
+	{
+		int32_t sx = 0;
+		int32_t sy = 0;
+		Pixel::Mode m = nPixelMode;
+		if (col.ALPHA != 255)	SetPixelMode(Pixel::ALPHA);
+		else					SetPixelMode(Pixel::MASK);
 		{
 			if (c == '\n')
 			{
