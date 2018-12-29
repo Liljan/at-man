@@ -2,24 +2,29 @@
 
 #include "olcPixelGameEngine.h"
 
+enum Type
+{
+	Wall,
+	Player,
+	Coin,
+	Ghost,
+	PowerUp,
+	Fruit
+};
+
 class Entity
 {
 public:
-	Entity();
-	Entity(float x, float y, char graphics);
-	~Entity();
-	
-	void Init();
-	void Update();
-	void Draw();
+	float x, y;
+	char graphics;
+	Type type;
+	olc::Pixel color;
+};
 
-	void SetActive(bool b) { m_IsActive = b; }
-	bool IsActive() { return m_IsActive; }
-
-protected:
-	float m_X;
-	float m_Y;
-	char m_Graphics;
-
-	bool m_IsActive;
+class Pac : public Entity
+{
+public:
+	float speed;
+	int xDir, yDir;
+	bool isActive = false;
 };

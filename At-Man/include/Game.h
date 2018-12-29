@@ -1,24 +1,6 @@
 #pragma once
 #include "olcPixelGameEngine.h"
-
-enum Type
-{
-	Wall,
-	Player,
-	Coin,
-	Ghost,
-	PowerUp,
-	Fruit
-};
-
-struct Entity
-{
-	float x, y;
-	const char* graphics;
-	Type type;
-	olc::Pixel color;
-	bool isActive = false;
-};
+#include "Entity.h"
 
 // Key bindings
 static olc::Key KEY_LEFT = olc::Key::LEFT;
@@ -36,10 +18,11 @@ public:
 	// called once after start
 	bool OnUserCreate() override;
 	bool OnUserUpdate(float elapsedTime) override;
+	void HandleInput();
+	void MoveEntities(float elapsedTime);
 	bool Draw();
 
 private:
 
-	Entity m_Player;
-	int dir[2];
+	Pac m_Pac;
 };

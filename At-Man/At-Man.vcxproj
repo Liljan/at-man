@@ -119,7 +119,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="external\olcPixelGameEngine.h" />
+    <ClInclude Include="include\Entity.h" />
     <ClInclude Include="include\Game.h" />
+    <ClInclude Include="include\Globals.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

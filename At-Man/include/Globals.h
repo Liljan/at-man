@@ -19,8 +19,10 @@ namespace globals
 	extern const uint APP_SIZE_Y = 210;
 	extern const uint APP_SCALE_PER_PIXEL = 4;
 
-	extern const uint GAME_SIZE_X = 40;
-	extern const uint GAME_SIZE_Y = 30;
+	extern const uint TILE_SCALE = 8;
+
+	extern const uint GAME_SIZE_X = 10;
+	extern const uint GAME_SIZE_Y = 4;
 
 	/*
 	size_t GetAppSizeX() { return APP_SIZE_X; }
