@@ -1,6 +1,0 @@
-﻿  Game.cpp
-c:\users\big boss\documents\at-man\at-man\src\game.cpp(20): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\big boss\documents\at-man\at-man\src\game.cpp(21): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\big boss\documents\at-man\at-man\src\game.cpp(71): warning C4244: 'argument': conversion from 'float' to 'int32_t', possible loss of data
-  At-Man.vcxproj -> C:\Users\Big Boss\Documents\at-man\At-Man\x64\Debug\At-Man.exe
-  At-Man.vcxproj -> C:\Users\Big Boss\Documents\at-man\At-Man\x64\Debug\At-Man.pdb (Partial PDB)
